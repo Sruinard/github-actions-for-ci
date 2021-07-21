@@ -2,6 +2,7 @@ name: Team awesome's approval workflow
 on: pull_request_review
 jobs:
   labelWhenApproved:
+    name: label approvement
     runs-on: ubuntu-latest
     steps:
     - name: approve based on pull pull_request
@@ -9,5 +10,5 @@ jobs:
       env:
         APPROVALS: "1"
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        ADD_LABEL: approval-count-met
+        ADD_LABEL: "approval-count-met"
 
